@@ -3,7 +3,7 @@
 # version: 0.1
 # authors: williscool
 
-register_asset('javascripts/signup.js')
+register_asset 'javascripts/signup.js', :server_side
 
 after_initialize do
   Discourse::Application.routes.prepend do
