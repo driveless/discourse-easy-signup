@@ -29,10 +29,7 @@ Discourse.EasySignupView = Discourse.CreateAccountView.extend({
 
 Discourse.EasySignupController = Discourse.CreateAccountController.extend({
   needs: ["create_account", "login"],
-  /**
-   Determines whether at least one login button is enabled
-  **/
-
+  
   actions: {
     showLoginExternal: function(loginMethod) {
        this.send('showLogin');
@@ -40,6 +37,9 @@ Discourse.EasySignupController = Discourse.CreateAccountController.extend({
     }
   },
 
+  /**
+   Determines whether at least one login button is enabled
+  **/
   hasAtLeastOneLoginButton: function() {
     return Em.get("Discourse.LoginMethod.all").length > 0;
   }.property("Discourse.LoginMethod.all.@each"),
