@@ -9,7 +9,10 @@ Add a `/signup` url that uses can go to to easily signup for your discourse
 re this discusion on the discourse forum [Plugin to make signup modal pop up at a route](https://meta.discourse.org/t/plugin-to-make-signup-modal-pop-up-at-a-route/11486)
 
 ### Installation 
-just clone this repo to the /plugins folder
+
+- Run `bundle exec rake plugin:install repo=https://github.com/driveless/discourse-easy-signup` in your discourse directory
+- In development mode, run `bundle exec rake assets:clean`
+- In production, recompile your assets: `bundle exec rake assets:precompile`
 
 
 ### Features:
